@@ -6,7 +6,7 @@
 
 word = 'testing'
 if len(word) % 2 == 0:
-    print(word[len(word)//2-1], word[len(word)//2], sep = '')
+    print(word[len(word)//2 - 1], word[len(word)//2], sep = '')
 else:
     print(word[len(word)//2])
 
@@ -54,6 +54,6 @@ for i in countries_temperature:
     count = 0  
     for k in i[1]:
         x = (k-32)/1.8
-        count+=1
+        count += 1
         sum += x 
     print(f'{i[0]} - {round(sum/count, 1)} C')
