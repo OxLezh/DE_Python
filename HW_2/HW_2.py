@@ -50,4 +50,4 @@ countries_temperature = [
 ]
 
 for i in countries_temperature:
-    print(f'{i[0]} - {round((mean(i[1]) - 32)/1.8,1)} C')
+    print(f'{i[0]} - {(mean(i[1]) - 32)/1.8 :.1f} C')
