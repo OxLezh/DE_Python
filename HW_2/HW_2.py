@@ -1,4 +1,4 @@
-
+from statistics import mean
 # Задание 1
 # Дана переменная, в которой хранится слово из латинских букв. Напишите код, который выводит на экран:
 # среднюю букву, если число букв в слове нечетное;
@@ -50,10 +50,4 @@ countries_temperature = [
 ]
 
 for i in countries_temperature:
-    sum = 0
-    count = 0  
-    for k in i[1]:
-        x = (k-32)/1.8
-        count += 1
-        sum += x 
-    print(f'{i[0]} - {round(sum/count, 1)} C')
+    print(f'{i[0]} - {round((mean(i[1]) - 32)/1.8,1)} C')
