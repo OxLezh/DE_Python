@@ -1,14 +1,14 @@
 from statistics import mean
-
 # Задание 1
 # Дана переменная, в которой хранится слово из латинских букв. Напишите код, который выводит на экран:
 # среднюю букву, если число букв в слове нечетное;
 # две средних буквы, если число букв четное.
 
-# word = 'testinп7'
-# print(word[(len(word)-1)//2:(len(word)+2)//2])
-# print((len(word)-1)//2)
-# print((len(word)+2)//2)
+word = 'testing'
+if len(word) % 2 == 0:
+    print(word[len(word)//2 - 1], word[len(word)//2], sep = '')
+else:
+    print(word[len(word)//2])
 
 # Задание 2
 # Напишите программу, которая последовательно запрашивает у пользователя числа (по одному за раз) и
@@ -49,8 +49,5 @@ countries_temperature = [
     ['Poland', [50, 50, 53.6, 57.2, 55.4, 55.4]]
 ]
 
-# for i in countries_temperature:
-#     print(f'{i[0]} - {(mean(i[1]) - 32)/1.8 :.1f} C')
-
-a = [x for x in  countries_temperature]
-print(a) 
+for i in countries_temperature:
+    print(f'{i[0]} - {(mean(i[1]) - 32)/1.8 :.1f} C')
