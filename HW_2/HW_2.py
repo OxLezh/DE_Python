@@ -20,22 +20,24 @@ else:
 #     a = int(input("Введите число: "))
 #     sum += a
 # # print(sum)
-# print(sum([int(x) for x in iter(input, '0')]))
+
+print(sum([int(x) for x in iter(input, '0')]))
+
 # # Задание 3
 # # Мы делаем MVP dating-сервиса, и у нас есть список парней и девушек.
 # # Выдвигаем гипотезу: лучшие рекомендации мы получим, если просто отсортируем имена по алфавиту
 # #  и познакомим людей с одинаковыми индексами после сортировки!
 # # Но мы не будем никого знакомить, если кто-то может остаться без пары.
 
-# boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard', 'Michael']
-# girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
+boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard', 'Michael']
+girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
 
-# if len(boys) == len(girls):
-#     print('Идеальные пары: ')
-#     for i in range(0, len(boys)):
-#         print(f' {sorted(boys)[i]} и {sorted(girls)[i]}')
-# else:
-#     print('Внимание, кто-то может остаться без пары!')
+if len(boys) == len(girls):
+    print('Идеальные пары: ')
+    for i in range(0, len(boys)):
+        print(f' {sorted(boys)[i]} и {sorted(girls)[i]}')
+else:
+    print('Внимание, кто-то может остаться без пары!')
 
 
 # # Задание 4
