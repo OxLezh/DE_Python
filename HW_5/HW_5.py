@@ -9,8 +9,8 @@ def purchases():
     purchases ={}
     with open('purchase_log.txt', "r",  encoding="utf-8") as f:
         for line in f:       
-            key, value = (json.loads(line).items())
-            purchases[key[1]] = value[1]
+            line = json.loads(line)
+            purchases[line['user_id']] = line['category']
     return purchases
 
         
