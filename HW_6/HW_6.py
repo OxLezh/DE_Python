@@ -37,8 +37,6 @@ def date_correctness():
     for item in stream:
         print(item[5:7] in month)
 
-
-
 # date_correctness()
 
 # Задание 3
@@ -51,11 +49,9 @@ def date_range():
 
     format_date = '%Y-%m-%d'
     try: 
-        start_date = datetime.strptime((input("Введите дату начала: ").strip()), format_date)
-                 
+        start_date = datetime.strptime((input("Введите дату начала: ").strip()), format_date)                 
         end_date = datetime.strptime((input("Введите дату окончания: ").strip()), format_date)
-        range_days = int((end_date - start_date).days)       
-    
+        range_days = int((end_date - start_date).days)           
         date_range = [(start_date + timedelta(days=x)).strftime(format_date) for x in range(range_days+1)]
         print(date_range)
     except:
