@@ -25,21 +25,23 @@ def str_datetime():
 
 # Задание 2
 # Дан поток дат в формате YYYY-MM-DD, в которых встречаются некорректные значения:
-stream = ['2018-04-02', '2018-02-29', '2018-19-02']
+stream = ['2018-12-02', '2018-02-29', '2018-19-02']
 
 # Напишите функцию, которая проверяет эти даты на корректность. Т. е. 
 # для каждой даты возвращает True (дата корректна) или False (некорректная дата).
 
 
 def date_correctness():
-
-    month = ['01','02','03','04','05','06','07','08','09','10','11','12']
+ 
+    format_date = '%Y-%m-%d'
     for item in stream:
-        print(item[5:7] in month)
+        try:              
+            res = bool(datetime.strptime(item, format_date))            
+        except:        
+            res = False      
+        print(res)
 
-
-
-# date_correctness()
+date_correctness()
 
 # Задание 3
 # Напишите функцию date_range, которая возвращает список дат за период от start_date до end_date.
