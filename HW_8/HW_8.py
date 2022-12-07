@@ -50,7 +50,9 @@ def reg_acronym(some_words):
 
     rezult = "".join(re.findall(r'\b[a-zA-Z]|\b[а-яёА-ЯЁ]', some_words)).upper()
         
-    print(rezult)    
+    print(rezult)  
+    
+#   второе решение     return re.sub(r"(\w)\w+\s?", r"\1", word).upper()
 
 # reg_acronym(some_words)
 
@@ -81,3 +83,11 @@ def reg_count_domen(emails):
         print(f'{key}: {value}')
 
 # reg_count_domen(emails)
+
+
+# второй вариант:
+# listdomain = re.findall(r'(?<=@)\w+.\w{2,3}', ' '.join(listmail))
+# for mail in set(listdomain):
+# print(f'{mail}: {listdomain.count(mail)}')
+
+# mail_domain(emails)
